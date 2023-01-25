@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+
+
+    <EditText
+        android:id="@+id/editBin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter BIN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button android:id="@+id/searchBin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBin" />
+
+    <TextView android:id="@+id/textView" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="Fill BIN for result"
+        android:textColor="@color/black" android:textSize="16sp" android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBin" />
+
+    <ImageView android:id="@+id/cardShape" android:layout_width="match_parent"
+        android:layout_height="250dp" android:layout_marginTop="8dp"
+        android:background="@drawable/card" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <TextView android:id="@+id/textViewScheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameScheme" />
+
+    <TextView android:id="@+id/textViewLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameLength" />
+
+    <androidx.constraintlayout.widget.Guideline android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" app:layout_constraintGuide_begin="10dp" />
+
+    <TextView android:id="@+id/textViewBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameBrand" />
+
+    <TextView
+        android:id="@+id/textViewNameCardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="CARD NUMBER"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBrand" />
+
+    <TextView
+        android:id="@+id/textViewNameLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="LENGTH"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameCardNumber" />
+
+    <TextView
+        android:id="@+id/textViewNameScheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="SCHEME/NETWORK"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/cardShape" />
+
+    <TextView
+        android:id="@+id/textViewNameBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="BRAND"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScheme" />
+
+    <TextView
+        android:id="@+id/textViewNameLuhn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="LUHN"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLength" />
+
+    <TextView android:id="@+id/textViewLuhn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameLuhn" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="150dp" />
+
+    <TextView
+        android:id="@+id/textViewNameType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TYPE"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@+id/cardShape" />
+
+    <TextView
+        android:id="@+id/textViewType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameType" />
+
+    <TextView
+        android:id="@+id/textViewNamePrepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="PREPAID"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewType" />
+
+    <TextView
+        android:id="@+id/textViewPrepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNamePrepaid" />
+
+    <TextView
+        android:id="@+id/textViewNameCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="COUNTRY"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrepaid" />
+
+    <TextView
+        android:id="@+id/textViewCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameCountry" />
+
+    <TextView android:id="@+id/textViewLatLong" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="N/A N/A" android:textColor="@color/black"
+        android:textSize="12sp" app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameLatLong" />
+
+    <androidx.constraintlayout.widget.Guideline android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" app:layout_constraintGuide_begin="220dp" />
+
+    <TextView
+        android:id="@+id/textViewNameBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="BANK"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/cardShape" />
+
+    <TextView android:id="@+id/textViewBank" android:layout_width="150dp"
+        android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="-"
+        android:textColor="@color/black" android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRight" app:layout_constraintTop_toBottomOf="@+id/textViewNameBank" />
+
+    <TextView android:id="@+id/textViewBankSite" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="N/A" android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRight" app:layout_constraintTop_toBottomOf="@+id/textViewNameSite" />
+
+    <TextView android:id="@+id/textViewBankPhone" android:layout_width="150dp"
+        android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="N/A"
+        android:textColor="@color/black" android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRight" app:layout_constraintTop_toBottomOf="@+id/textViewNamePhone" />
+    <TextView android:id="@+id/textViewNameLatLong" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginTop="5dp"
+        android:text="latitude/longitude"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCountry" />
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/textViewNameSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="SITE"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRight" app:layout_constraintTop_toBottomOf="@+id/textViewBank" />
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/textViewNamePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="PHONE"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBankSite" />
+    <ImageView
+
+        android:id="@+id/cardShapeInvisible"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <TextView android:id="@+id/textViewResults" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:text="Search history:" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardShape" />
+    <TextView android:id="@+id/textViewZeroResult" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp" android:text="No results found"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResults" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:scrollbars="vertical"
+app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResults" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
